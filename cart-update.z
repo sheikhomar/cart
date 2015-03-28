@@ -1,0 +1,5 @@
+cart-update() {
+  wget -m --no-parent --no-host-directories -P ~/Desktop/download-materiale/ --cut-dirs=2 --reject 'index.html*' http://people.cs.aau.dk/~mchro/CART/
+  sed -i -e 's#skrivebord#Desktop#gi' ~/Desktop/download-materiale/update.sh
+  bash ~/Desktop/download-materiale/update.sh
+}
