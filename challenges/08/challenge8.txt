@@ -1,0 +1,6 @@
+Optimer C-programmet challenge8.c, mere specifikt funktionen average_array.
+
+I kan compile med
+gcc -o challenge8 challenge8.c
+og køre med tidstagning med
+time ./challenge8

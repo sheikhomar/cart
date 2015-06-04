@@ -1,0 +1,45 @@
+Du har modtaget en binær bombe fra den datalogiske bande Big Endians, i form af programmet "challenge2"!
+
+Kan du desarmere/disassemble bomben, og finde et input så den ikke sprænger i luften?
+
+HINT: Du kan bruge 
+objdump -d challenge2
+til at få assemblerkoden vist. Det meste ligner dog volapyk, bortset fra...
+
+
+08048527 <answer1>:
+push   %ebp             
+mov    %esp,%ebp  
+sub    $0x10,%esp        # Allocate 16 bytes
+movl   $0x2a,-0x4(%ebp)  # x = 0x2a
+mov    -0x4(%ebp),%eax   # return 42
+leave  
+ret    
+
+
+08048539 <answer2>:
+push   %ebp         
+mov    %esp,%ebp
+sub    $0x10,%esp        # Allocate 16 bytes
+movl   $0x2a,-0x4(%ebp)  # arg1 = 0x2a
+shll   $0x3,-0x4(%ebp)   # arg1 = arg1 << 3
+mov    -0x4(%ebp),%eax   # return 336 (42*2^3)
+leave  
+ret    
+
+0804854f <answer3>:
+push   %ebp 
+mov    %esp,%ebp
+sub    $0x10,%esp        # Allocate 16 bytes on stack
+movl   $0x2a,-0x4(%ebp)  # arg1 = 0x2a
+shll   $0x3,-0x4(%ebp)   # arg1 = 0x2a << 3 = 0x2a * 0x8 = 0x150
+xorl   $0x11,-0x4(%ebp)  # arg1 = 0x150 ^ 0x11 = 0x141
+mov    -0x4(%ebp),%edx   # edx = 0x141
+mov    %edx,%eax         # eax = 0x141
+add    %eax,%eax         # eax = 0x141+0x141=0x282
+add    %edx,%eax         # eax = 0x282+0x141=0x3C3
+mov    %eax,-0x4(%ebp)   # arg1 = 0x3c3
+shll   $0xa,-0x4(%ebp)   # arg1 = 0x3C3 << 0xA = F0C00
+mov    -0x4(%ebp),%eax   # return 986112
+leave  
+ret    

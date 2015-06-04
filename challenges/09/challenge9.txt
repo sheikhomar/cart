@@ -1,0 +1,8 @@
+I har modtaget en sending computere fra Asien, og er blevet lovet at de har en vis mængde L1 og L2 cache. Det er dog sket før at elektronik ikke *helt* er levet op til det der er blevet lovet.
+
+Dagens challenge går derfor ud på at udføre et antal eksperimenter, der sandsynliggør at jeres computer har den cache I er blevet lovet.
+
+1. Start med at finde ud af hvilk(e) caches jeres computer burde have.
+2. Eftervis det eksperimentelt.
+
+HINT! På http://igoro.com/archive/gallery-of-processor-cache-effects/ er et antal programmer I kan tage udgangspunkt i. Om I laver eksperimenterne i C eller C# er op til jer; modulo compiler-optimeringer burde resultaterne være nogenlunde ens.

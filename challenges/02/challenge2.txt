@@ -1,0 +1,7 @@
+Du har modtaget en binær bombe fra den datalogiske bande Big Endians, i form af programmet "challenge2"!
+
+Kan du desarmere/disassemble bomben, og finde et input så den ikke sprænger i luften?
+
+HINT: Du kan bruge 
+objdump -d challenge2
+til at få assemblerkoden vist. Det meste ligner dog volapyk, bortset fra...

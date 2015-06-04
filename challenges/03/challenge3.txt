@@ -1,0 +1,18 @@
+Velkommen til 80'erne!
+
+En computer der styrer USA's samlede atomvåben-arsenal er gået amok, og vil kun spille to spil: "x86 Assembly" eller "Global Thermonuclear War".
+Hvis I taber i "Global Thermonuclear War" fyrer den desværre alle missilerne af, så undlad at tabe.
+
+Jeres eneste chance er at spille "x86 Assembly". Hvis bare der var en måde at finde launch coden...
+
+I kan skrive små assembler programmer ved at lave en fil kaldet f.x.
+ test1.as
+med indhold
+
+mov $0, %eax
+
+få den assemblet med
+ as -o test1 test1.as
+og disassemble den resulterende test1 med
+ objdump -d test1
+

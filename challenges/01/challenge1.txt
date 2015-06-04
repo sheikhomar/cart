@@ -1,0 +1,15 @@
+Du er et ondt geni, der er kunde i banken SlamBank.
+
+Du mistænker at SlamBank's system indeholder fejl du kan udnytte til at røve banken.
+Fordi du er ond vil du udnytte disse fejl!
+For ikke at blive opdaget vil du gerne lave så få transaktioner (hævninger/indsættelser) som muligt.
+
+SlamBank programmet køres som
+./challenge1
+og har et simpelt menu-interface.
+
+Hvor stort et udbytte kan du få på:
+ 4 transaktioner?
+ 3 transaktioner?
+ 2 transaktioner?
+ 1 transaktion?

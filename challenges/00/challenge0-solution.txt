@@ -1,0 +1,13 @@
+Message 1:
+Each integer value represents 4 bytes of data. 
+1) Convert each value to hex.
+2) Treat each byte as char
+
+0x202E6C4B - ’ ’.lK
+0x202C3431 - ’ ’,41
+0x69736162 - isab
+0x72616273 - rabs
+0x00206E65 - \0 ne
+
+The encoded message is: "Kl. 14, basisbaren"
+

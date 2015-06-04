@@ -1,0 +1,38 @@
+Velkommen til 80'erne!
+
+En computer der styrer USA's samlede atomvåben-arsenal er gået amok, og vil kun spille to spil: "x86 Assembly" eller "Global Thermonuclear War".
+Hvis I taber i "Global Thermonuclear War" fyrer den desværre alle missilerne af, så undlad at tabe.
+
+Jeres eneste chance er at spille "x86 Assembly". Hvis bare der var en måde at finde launch coden...
+
+I kan skrive små assembler programmer ved at lave en fil kaldet f.x.
+ test1.as
+med indhold
+
+mov $0, %eax
+
+få den assemblet med
+ as -o test1 test1.as
+og disassemble den resulterende test1 med
+ objdump -d test1
+
+
+
+Solution How To #1:
+
+
+
+
+Solution How To #2:
+
+The program reveals which memory address contains the launch code. 
+GNU Debugger gdb can examine bytes at certain location using
+x/20b 0xFF1 => Examines first 20 bytes at memory location 0xFF1
+
+
+(gdb) x/40b 0x804a060
+0x804a060 <secret>:	74	111	115	104	117	97	70	97
+0x804a068 <secret+8>:	108	107	101	110	0	67	80	69
+0x804a070 <launchcode+3>:	49	55	48	52	84	75	83	0
+0x804a078:	0	0	0	0	0	0	0	0
+0x804a080 <games_msg>:	87	111	117	108	100	32	121	111

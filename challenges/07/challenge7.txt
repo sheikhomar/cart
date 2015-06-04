@@ -1,0 +1,9 @@
+Dagens challenge går ud på at finde passwordet til programmet challenge7.
+Passwordet består af store og små bogstaver.
+
+Udfordringen er at finde passwordet uden at disassemble programmet, det tager blot lidt tid.
+
+Husk at programmet kan køres med input på følgende måde:
+echo "abcdefg" | ./challenge7
+
+HINT! Det kan betale sig at starte fra starten.

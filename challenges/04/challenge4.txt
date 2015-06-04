@@ -1,0 +1,16 @@
+Desværre fejlede challenge3, så civilisationen som vi kender den blev desværre udslettet.
+
+For at genstarte civilisationen bliver I nødt til at få en C-compiler til at virke. I har fundet:
+ * én x86 computer
+ * én C-compiler der har glemt hvordan man udfører diverse operationer
+
+I bliver derfor nødt til at re-implementere disse operationer, som indlejret assembly.
+Der findes et skelet i filen 
+challenge4.c
+
+Den binære fil challenge4-tester.o er en test suite der tester jeres implementation. I kan compile jeres kode sammen med testeren med:
+gcc challenge4-tester.o challenge4.c -o challenge4
+og så køre
+./challenge4
+for at se om I har re-implementeret korrekt.
+

@@ -1,0 +1,11 @@
+I er stadig ved at genopbygge civilisationen efter challenge3. I er nu kommet til at skulle konstruere en ALU.
+
+Challengen går ud på at konstruere et elektronisk kredsløb der tager to 8-bit tal som input, og beregner deres sum.
+
+Dvs. ud fra de logiske gates (AND, OR, NAND, XOR, NOT, ...) skal I bygge et kredsløb der beregner output som denne stump C-kode:
+===
+byte x, y, output;
+output = x + y;
+===
+
+HINT! Start med at beregne en enkelt bit, og lad output være to bits: værdi og mente. Mente skal så bringes videre til næste bit.
