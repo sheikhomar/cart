@@ -58,8 +58,6 @@ void test_address(MultiLineCache *cache, int addr) {
 }
 
 void print_info(MultiLineCache *cache) {
-  int addr, block_offset, set_index, tag;
-
   printf("Cache size: %d bytes\n", cache->size);
   printf("Bits for tags:         t = %d\n", cache->t);
   printf("Bits for set index:    s = %d\n", cache->s);
