@@ -15,3 +15,6 @@ pipelining:
 show_bytes:
 	gcc $(CFLAGS) show_bytes.c -o show_bytes.o
 	./show_bytes.o
+assembly:
+	gcc $(CFLAGS) assembly.c -o assembly.o
+	./assembly.o
