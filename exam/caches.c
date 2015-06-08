@@ -53,8 +53,8 @@ void test_address(MultiLineCache *cache, int addr) {
   printf("Bit pattern for 0x%X: %s\n", addr, to_binary(addr, cache->address_bit_count));
 
   printf(" -    Set index (CI): %d (0x%X)\n", set_index, set_index);
-  printf(" - Block offset (CO): %d (0x%X)\n", block_offset, block_offset);
   printf(" -    Tag index (CT): %d (0x%X)\n", tag, tag);
+  //printf(" - Block offset (CO): %d (0x%X)\n", block_offset, block_offset);
 }
 
 void print_info(MultiLineCache *cache) {
@@ -123,10 +123,32 @@ void test_case_3() {
   test_address(&c1,  0x1FE4);
 }
 
+void test_case_4() {
+  MultiLineCache c1;
+  // Cache (S, E, B, m) = (4, 1, 2, 8)
+  c1.address_bit_count = 8; // 8-bit system (m=8)
+  c1.line_count = 1; // Direct Map cache (E=1)
+  c1.set_count = 4; // 4 cache sets (S=4)
+  c1.block_size = 8; // Block size is 8 bytes (B=8)
+
+  cache_update(&c1);
+
+  print_info(&c1);
+
+  printf("\n");
+  test_address(&c1,  0x64);
+  test_address(&c1,  0x70);
+  test_address(&c1,  0x00);
+  test_address(&c1,  0x01);
+  test_address(&c1,  0x78);
+  test_address(&c1,  0x02);
+  test_address(&c1,  0xA0);
+}
 int main() {
-  test_case_1();
-  test_case_2();
-  test_case_3();
+  //test_case_1();
+  //test_case_2();
+  //test_case_3();
+  test_case_4();
 
   return 0;
 }

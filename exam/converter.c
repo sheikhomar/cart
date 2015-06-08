@@ -37,11 +37,10 @@ void print_conversions(int number, int bits) {
 void number_conversions() {
   int bits = 8;
   printf("Converting numbers\n");
-  print_conversions(0b01001101, bits);
-  print_conversions(0xA1,       bits);
-  print_conversions(254,        bits);
-  print_conversions(-17,        bits);
-  print_conversions(255,        bits);
+  print_conversions(0b11100100, bits);
+  print_conversions(0xF1,       bits);
+  print_conversions(17,        bits);
+  print_conversions(-34,        bits);
 }
 
 
@@ -70,8 +69,8 @@ void bit_masking() {
   problem_2_12_c(x);
 }
 void bit_level_operations() {
-  int x = 0xA8;
-  int y = 24;
+  int x = 0x73;
+  int y = 211;
   int bits = 8;
   unsigned int bit_mask = (1 << bits) - 1;
 
@@ -82,8 +81,9 @@ void bit_level_operations() {
   printf(" x & y   = 0x%X\n", ( (x & y)   & bit_mask) );
   printf(" x | y   = 0x%X\n", ( (x | y)   & bit_mask) );
   printf(" x ^ y   = 0x%X\n", ( (x ^ y)   & bit_mask) );
-  printf(" ~x | ~y = 0x%X\n", ( (~x | ~y) & bit_mask) );
-  printf(" y << 2  = 0x%X\n", ( (y << 2)  & bit_mask) );
+  printf(" x | y   = 0x%X\n", ( (~x | ~y)   & bit_mask) );
+  printf(" x & ~y  = 0x%X\n", ( (x & ~y) & bit_mask) );
+  printf(" y << 4  = 0x%X\n", ( (y << 4)  & bit_mask) );
 }
 
 void problem_2_17() {
@@ -111,16 +111,16 @@ void problem_2_18() {
 int main() {
   unsigned int bits = 8;
 
-  printf("%s\n", to_binary(-17,         bits));
-  printf("%s\n", to_binary(0x69 & 0x55, bits));
-  printf("%s\n", to_binary(~0xF, bits));
+  //printf("%s\n", to_binary(-17,         bits));
+  //printf("%s\n", to_binary(0x69 & 0x55, bits));
+  //printf("%s\n", to_binary(~0xF, bits));
 
   bit_level_operations();
-  number_conversions();
-  bit_masking();
+  //number_conversions();
+  //bit_masking();
 
-  problem_2_17();
-  problem_2_18();
+  //problem_2_17();
+  //problem_2_18();
 
   return 0;
 }
